@@ -17,6 +17,8 @@ Built as a tool for GSoC 2026 applicants who are overwhelmed by 500+ org choices
 
 ---
 
+![GLOBOC Demo](assets/globoc.gif)
+
 ## Features
 
 - **3D Globe** — MapLibre globe projection with auto-spin, atmosphere glow, and star field
