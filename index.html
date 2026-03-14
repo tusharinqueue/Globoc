@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSoC Globe</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="search-wrapper">
+        <div id="search-container">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input id="global-search" type="text" placeholder="Search orgs, stacks, domains..." autocomplete="off">
+            <span id="search-stats" class="badge hidden"></span>
+            <button id="search-clear" class="icon-btn hidden">✕</button>
+        </div>
+        <div id="search-dropdown" class="hidden"></div>
+    </div>
+    <div id="map"></div>
+    <aside id="filter-panel">
+        <div class="panel-header">
+            <span class="panel-title">&gt; FILTERS</span>
+            <span id="filter-count" class="badge hidden"></span>
+            <button id="filter-toggle" class="icon-btn">✕</button>
+        </div>
+        <div class="filter-section">
+            <label class="filter-label">// YEAR</label>
+            <div id="year-pills" class="pill-group"></div>
+        </div>
+        <div class="filter-section">
+            <label class="filter-label">// DOMAIN</label>
+            <div id="category-pills" class="pill-group"></div>
+        </div>
+        <div class="filter-section">
+            <label class="filter-label">// TECH STACK</label>
+            <input id="tech-search" class="text-input" type="text" placeholder="type stack + Enter..." />
+            <div id="tech-tags" class="tag-group"></div>
+        </div>
+        <div class="filter-section">
+            <label class="filter-label">// VETERAN ONLY</label>
+            <label class="toggle-row">
+                <input id="veteran-toggle" type="checkbox" />
+                <span class="toggle-label">5+ Year Orgs Only</span>
+            </label>
+        </div>
+        <div class="filter-section">
+            <button id="preset-aiml" class="preset-btn">[GSoC 2026 AI/ML PRESET]</button>
+        </div>
+        <div class="filter-section">
+            <button id="clear-filters" class="ghost-btn">&gt; clear all filters</button>
+        </div>
+    </aside>
+    <button id="filter-open-btn" class="fab hidden">&gt;_ FILTERS</button>
+
+    <aside id="detail-panel" class="collapsed">
+        <div class="panel-header">
+            <span id="detail-title" class="panel-title"></span>
+            <button id="detail-close" class="icon-btn">✕</button>
+        </div>
+        <div id="detail-body"></div>
+    </aside>
+
+    <script src="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+    <script src="app.js" defer></script>
+</body>
+
+</html>
