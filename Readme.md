@@ -48,8 +48,8 @@ No build step. No dependencies to install. Open `index.html` and it works.
 ## Getting Started
 
 ```bash
-git clone https://github.com/tusharinqueue/globoc
-cd globoc
+git clone https://github.com/tusharinqueue/Globoc
+cd Globoc
 ```
 
 Open `index.html` in your browser. That's it.
