@@ -7,6 +7,7 @@
 ![GSoC Orgs](https://img.shields.io/badge/GSoC_Orgs-520+-ff6b35?style=flat-square&labelColor=0a0a0f)
 ![License](https://img.shields.io/badge/License-MIT-565f89?style=flat-square&labelColor=0a0a0f)
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit-00f5ff?style=flat-square&labelColor=0a0a0f)](https://tusharinqueue.github.io/Globoc)
 ---
 
 ## What is this
